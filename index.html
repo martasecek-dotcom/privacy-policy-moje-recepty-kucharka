@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moje recepty – kuchařka – zásady ochrany soukromí a pravidla používání</title>
+<meta name="description" content="Zásady ochrany soukromí a pravidla používání aplikace Moje recepty – kuchařka. Privacy policy and terms of use of the My Recipes – Cookbook app.">
+<style>
+  /* Barvy podle barevného ladění aplikace (Terakota); tmavý režim podle systému. */
+  :root {
+    --bg: #fbf8f3;
+    --card: #ffffff;
+    --text: #23211f;
+    --muted: #6b665f;
+    --line: #e7e1d8;
+    --accent: #b5562f;
+    --accent-soft: #f9ece4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a;
+      --card: #201f24;
+      --text: #ecebea;
+      --muted: #a5a19b;
+      --line: #34323a;
+      --accent: #f0a27c;
+      --accent-soft: #33261f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 8px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo { font-size: 40px; line-height: 1; }
+  .brand h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .brand p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted);
+    padding: 6px 14px; font: inherit; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  nav.toc {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 16px 0 24px;
+    font-size: 0.95rem;
+  }
+  nav.toc a { color: var(--text); margin-right: 16px; white-space: nowrap; }
+  section.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 8px 24px 16px;
+    margin-bottom: 24px;
+  }
+  h2 { font-size: 1.3rem; margin: 20px 0 4px; }
+  h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.93rem; margin: 8px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 0.85rem; }
+  body:not(.en) [lang="en"] { display: none; }
+  body.en [lang="cs"] { display: none; }
+  @media (max-width: 520px) { section.card { padding: 4px 16px 12px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true">📖</div>
+    <div>
+      <h1 lang="cs">Moje recepty – kuchařka</h1>
+      <h1 lang="en">My Recipes – Cookbook</h1>
+      <p lang="cs">Zásady ochrany soukromí a pravidla používání</p>
+      <p lang="en">Privacy policy and terms of use</p>
+    </div>
+  </div>
+  <div class="lang" role="group" aria-label="Jazyk / Language">
+    <button type="button" data-lang="cs" aria-pressed="true">Čeština</button>
+    <button type="button" data-lang="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ ČESKY ============================ -->
+<div lang="cs">
+  <p class="muted">Platné od 15. 11. 2026 (aktualizováno: statistiky a hlášení o pádech)</p>
+  <nav class="toc">
+    <a href="#soukromi">Ochrana soukromí</a>
+    <a href="#smazani">Smazání dat</a>
+    <a href="#pravidla">Pravidla používání</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section class="card" id="soukromi">
+    <h2>Zásady ochrany soukromí</h2>
+    <p>Tyto zásady popisují, jaké údaje zpracovává mobilní aplikace <strong>Moje recepty – kuchařka</strong> (dále „aplikace“), proč a jak můžete svá práva uplatnit. Aplikaci provozuje Martin Palla, vývojář aplikace (dále „my“), kontakt najdete <a href="#kontakt">na konci stránky</a>.</p>
+    <p><strong>Vaše recepty jsou ve vašem telefonu.</strong> Recepty, fotky, nákupní seznam, spíž, hodnocení a nastavení se ukládají jen v soukromé složce aplikace v telefonu a nikam se neposílají, dokud se sami nerozhodnete něco sdílet. Aplikaci můžete používat bez registrace, bez přihlášení a bez internetu. Přihlášení (anonymní nebo účtem Google) je dobrovolné a potřebujete ho jen pro sdílení přes internet, veřejný katalog a přátele.</p>
+
+    <h3>Jaké údaje zpracováváme</h3>
+    <div class="scroll">
+    <table>
+      <tr><th>Údaje</th><th>K čemu</th><th>Kde</th></tr>
+      <tr><td>Recepty, fotky, nákupní seznam, spíž, hodnocení, nastavení</td><td>Vaše kuchařka</td><td>Ve vašem zařízení</td></tr>
+      <tr><td>Fotka receptu a rozpoznaný text; text receptu při překladu</td><td>Rozpoznání textu z fotky a překlad receptu (Google ML Kit) – probíhá přímo v telefonu, nic se neodesílá</td><td>Ve vašem zařízení</td></tr>
+      <tr><td>Jazykové modely pro rozpoznávání textu a překlad (stahují se jen s vaším souhlasem; Google přitom vidí běžné technické údaje, např. IP adresu)</td><td>Aby rozpoznávání a překlad fungovaly i bez internetu</td><td>Stažení ze serverů Google</td></tr>
+      <tr><td>Soubory PDF, ZIP a zálohy</td><td>Export, tisk, sdílení souborem, záloha – uloží se tam, kam sami určíte. Záloha obsahuje jen jednosměrný otisk (SHA-256) vašeho účtu nebo instalace aplikace, ze kterého nejde zjistit ID ani e-mail; slouží k tomu, aby zálohu mohl plně obnovit jen její vlastník</td><td>Ve vašem zařízení / kde zvolíte</td></tr>
+      <tr><td>Identifikátor uživatele (Firebase Authentication) – při anonymním přihlášení bez osobních údajů</td><td>Rozlišení uživatelů při sdílení, v katalogu a u přátel</td><td>Server (Google Firebase)</td></tr>
+      <tr><td>Jen při přihlášení účtem Google: e-mail a jméno účtu Google, které Firebase Authentication převezme od Googlu</td><td>Přihlášení k vašemu účtu, i v jiném zařízení</td><td>Server (Google Firebase)</td></tr>
+      <tr><td>Přezdívka</td><td>Zobrazení v katalogu a u přátel; každá přezdívka smí patřit jen jednomu uživateli</td><td>Server, viditelná ostatním</td></tr>
+      <tr><td>Recept sdílený kódem (text bez fotek)</td><td>Předání receptu jinému uživateli</td><td>Server</td></tr>
+      <tr><td>Zveřejněné recepty nebo jejich vizitky v katalogu, souhrn hodnocení</td><td>Veřejný katalog receptů</td><td>Server, veřejně viditelné v aplikaci</td></tr>
+      <tr><td>Hodnocení receptu v katalogu (počet hvězdiček)</td><td>Průměrné hodnocení – ostatní vidí jen průměr, ne kdo hodnotil</td><td>Server</td></tr>
+      <tr><td>Žádosti o recept a souhlasy autorů (přezdívky obou stran, název receptu)</td><td>Vyžádání receptu z katalogu, zveřejnění receptu od rodiny se souhlasem autora</td><td>Server</td></tr>
+      <tr><td>Přátelé a recepty, které si posíláte (text bez fotek)</td><td>Posílání receptů přátelům</td><td>Server</td></tr>
+      <tr><td>Nahlášení receptu (kdo nahlásil, důvod, poznámka, nahlášený recept), blokování a žádost o odblokování</td><td>Moderování nevhodného obsahu a ochrana autorských práv</td><td>Server</td></tr>
+      <tr><td>Statistiky používání (např. spuštění aplikace, zahájení vaření, vytvoření zálohy), model zařízení, verze systému, identifikátor instalace aplikace</td><td>Zlepšování aplikace (Google Analytics for Firebase) – bez receptů, jmen, přezdívek, e-mailů a bez reklamního ID</td><td>Google – jen s vaším souhlasem</td></tr>
+      <tr><td>Hlášení o pádech aplikace (technický popis chyby, model zařízení, verze systému a aplikace)</td><td>Oprava chyb (Firebase Crashlytics)</td><td>Google</td></tr>
+      <tr><td>Reklamní identifikátor, IP adresa, údaje o zařízení a o zobrazení reklamy</td><td>Zobrazení občasné celoobrazovkové reklamy (Google AdMob)</td><td>Google</td></tr>
+    </table>
+    </div>
+    <p>Do přezdívky prosím nepište své skutečné celé jméno ani jiné osobní údaje. Ostatní uživatelé vidí jen vaši přezdívku – nikdy e-mail ani jméno z účtu Google. Aplikace nepotřebuje oprávnění k fotoaparátu, úložišti ani poloze (fotky a soubory vybíráte systémovými dialogy).</p>
+
+    <h3>Statistiky a hlášení o pádech</h3>
+    <p>Při prvním spuštění se vás aplikace zeptá, zda smí posílat anonymní <strong>statistiky používání</strong>. Bez vašeho souhlasu se statistiky neposílají vůbec. <strong>Hlášení o pádech</strong> pomáhají opravovat chyby a jsou zapnutá. Obojí můžete kdykoli zapnout nebo vypnout v aplikaci: Nastavení → Soukromí.</p>
+
+    <h3>Reklamy a souhlas</h3>
+    <p>Bezplatná verze občas zobrazí celoobrazovkovou reklamu s odměnou – v přirozené přestávce, s možností ji přeskočit. Odměnou za dokoukání je delší pauza bez reklam. Reklamy poskytuje Google AdMob. Pokud jste v EU nebo EHP, aplikace se vás při prvním spuštění zeptá na souhlas formulářem Googlu (UMP). Bez souhlasu se zobrazují jen nepersonalizované reklamy. Svůj souhlas můžete kdykoli změnit v aplikaci: Nastavení → Soukromí reklam. Reklamní identifikátor můžete vymazat nebo zakázat v nastavení telefonu.</p>
+
+    <h3>Právní základ</h3>
+    <ul>
+      <li><strong>Plnění smlouvy</strong> – sdílení, katalog, přezdívka a přátelé, pokud tyto funkce používáte.</li>
+      <li><strong>Souhlas</strong> – statistiky používání a personalizované reklamy (v EU/EHP).</li>
+      <li><strong>Oprávněný zájem</strong> – hlášení o pádech pro opravu chyb, nepersonalizované reklamy pro financování aplikace, moderování obsahu, ochrana autorských práv a ochrana proti zneužití.</li>
+    </ul>
+
+    <h3>Kdo údaje zpracovává</h3>
+    <p>Údaje na serveru ukládáme ve službách Google Firebase (Authentication, Cloud Firestore, Analytics, Crashlytics); reklamy zajišťuje Google AdMob; rozpoznávání textu a překlad zajišťuje Google ML Kit přímo v telefonu. Google může údaje zpracovávat i mimo EU, a to na základě standardních smluvních doložek EU. Více v <a href="https://policies.google.com/privacy" rel="noopener">zásadách ochrany soukromí Googlu</a> a na stránce <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Jak Google používá data z aplikací partnerů</a>. Vaše údaje neprodáváme.</p>
+
+    <h3>Jak dlouho údaje uchováváme</h3>
+    <ul>
+      <li>Účet, přezdívku, zveřejněné recepty, hodnocení a přátele, dokud je nesmažete v aplikaci nebo nepožádáte o smazání.</li>
+      <li>Recept sdílený kódem do převzetí příjemcem, nejvýše 7 dní. Žádost o recept nejvýše 30 dní, kód souhlasu autora 7 dní.</li>
+      <li>Recept poslaný příteli do převzetí nebo odmítnutí.</li>
+      <li>Nahlášení a záznamy o blokování po dobu nutnou k vyřízení a ochraně ostatních uživatelů.</li>
+      <li>Statistiky a hlášení o pádech po dobu nastavenou ve službách Google Firebase.</li>
+      <li>Údaje v zařízení, dokud aplikaci neodinstalujete nebo nesmažete její data.</li>
+    </ul>
+
+    <h3>Vaše práva</h3>
+    <p>Máte právo na přístup ke svým údajům, jejich opravu a výmaz, omezení zpracování, přenositelnost, právo vznést námitku a odvolat souhlas. Pokud máte za to, že údaje zpracováváme v rozporu s předpisy, můžete podat stížnost u dozorového úřadu – v Česku je to <a href="https://uoou.gov.cz" rel="noopener">Úřad pro ochranu osobních údajů</a>.</p>
+  </section>
+
+  <section class="card" id="smazani">
+    <h2>Smazání dat</h2>
+    <ul>
+      <li><strong>Data v zařízení</strong> (recepty, fotky, nákup, spíž) smažete odinstalováním aplikace nebo vymazáním jejích dat v nastavení telefonu. Jednotlivé recepty můžete smazat přímo v aplikaci.</li>
+      <li><strong>Zveřejněný recept</strong> můžete kdykoli odebrat z katalogu (u receptu nebo v Katalog → Moje zveřejněné recepty).</li>
+      <li><strong>Účet a data na serveru</strong> smažete přímo v aplikaci: Nastavení → Účet → Smazat účet a data. Smaže se účet, přezdívka, sdílené kódy, zveřejněné recepty, přátelé a poslané recepty, žádosti, souhlasy a hodnocení.</li>
+      <li>O smazání (včetně nahlášení) můžete požádat i e-mailem: napište na <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> a uveďte svou přezdívku v aplikaci. Žádost vyřídíme do 30 dnů.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="pravidla">
+    <h2>Pravidla používání</h2>
+    <p>Používáním sdílení, veřejného katalogu a přátel souhlasíte s následujícím:</p>
+    <ul>
+      <li>Sdílejte a zveřejňujte jen recepty, které jste sami vymysleli nebo celé napsali vlastními slovy, nebo recepty od rodiny či přátel s jejich souhlasem.</li>
+      <li>Nesdílejte recepty z kuchařek, časopisů ani webových stránek – jsou chráněné autorským právem, a to ani vyfocené, přepsané nebo jen mírně upravené. Takové recepty si můžete ukládat jen pro osobní potřebu.</li>
+      <li>Nezveřejňujte sprostý, urážlivý, nenávistný, sexuální, násilný ani reklamní obsah – ani v přezdívce, názvu, popisu či postupu receptu.</li>
+      <li>Nepoužívejte cizí jména, značky ani obsah chráněný autorským právem bez svolení.</li>
+      <li><strong>Za obsah, který sdílíte nebo zveřejníte, odpovídáte výhradně vy.</strong> Pokud nasdílíte nebo zveřejníte recept, který porušuje autorská práva nebo jiná práva třetích osob, nesete veškeré právní následky sami – včetně případných nároků autorů na odstranění, odškodnění nebo náhradu škody. Provozovatel aplikace takový obsah nevytváří ani předem nekontroluje a za něj neodpovídá; po upozornění ho bez zbytečného odkladu skryje nebo odstraní.</li>
+      <li>Zveřejněním nám dáváte bezplatné, nevýhradní svolení tento obsah v aplikaci zobrazovat ostatním uživatelům, dokud ho neodeberete.</li>
+      <li>Nevhodný recept může kdokoli nahlásit. Po několika nahlášeních se recept automaticky skryje. Obsah, který porušuje pravidla, můžeme skrýt nebo smazat a uživateli můžeme omezit veřejné sdílení; o odblokování lze požádat v aplikaci.</li>
+      <li>Nezneužívejte chyby aplikace a nepokoušejte se narušit server.</li>
+      <li>Aplikace se může měnit, online funkce mohou být dočasně nedostupné. Aplikaci poskytujeme „tak, jak je“, v rozsahu, jaký zákon dovoluje.</li>
+      <li>Pravidla můžeme změnit. O podstatné změně vás budeme informovat v aplikaci.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Martin Palla – vývojář aplikace Moje recepty – kuchařka<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+<!-- ============================ ENGLISH ============================ -->
+<div lang="en">
+  <p class="muted">Effective from 15 November 2026 (updated: statistics and crash reports)</p>
+  <nav class="toc">
+    <a href="#privacy">Privacy</a>
+    <a href="#delete">Data deletion</a>
+    <a href="#terms">Terms of use</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="card" id="privacy">
+    <h2>Privacy policy</h2>
+    <p>This policy explains what data the mobile app <strong>My Recipes – Cookbook</strong> (Moje recepty – kuchařka; the “app”) processes, why, and how you can exercise your rights. The app is operated by Martin Palla, the developer of the app (“we”); contact details are <a href="#contact">at the end of this page</a>.</p>
+    <p><strong>Your recipes stay on your phone.</strong> Recipes, photos, the shopping list, the pantry, ratings and settings are stored only in the app's private folder on your phone and are not sent anywhere unless you decide to share something. You can use the app without registering, without signing in and without an internet connection. Signing in (anonymously or with a Google account) is optional and is only needed for sharing over the internet, the public catalogue and friends.</p>
+
+    <h3>What data we process</h3>
+    <div class="scroll">
+    <table>
+      <tr><th>Data</th><th>Purpose</th><th>Where</th></tr>
+      <tr><td>Recipes, photos, shopping list, pantry, ratings, settings</td><td>Your cookbook</td><td>On your device</td></tr>
+      <tr><td>Recipe photo and recognised text; recipe text during translation</td><td>Text recognition from photos and recipe translation (Google ML Kit) – runs directly on your phone, nothing is uploaded</td><td>On your device</td></tr>
+      <tr><td>Language models for text recognition and translation (downloaded only with your consent; Google sees ordinary technical data such as your IP address)</td><td>So recognition and translation also work offline</td><td>Downloaded from Google servers</td></tr>
+      <tr><td>PDF, ZIP and backup files</td><td>Export, printing, sharing by file, backup – saved where you choose. A backup contains only a one-way fingerprint (SHA-256) of your account or app installation from which no ID or e-mail can be derived; it lets only the owner fully restore the backup</td><td>On your device / where you choose</td></tr>
+      <tr><td>User identifier (Firebase Authentication) – with anonymous sign-in no personal data</td><td>Telling users apart when sharing, in the catalogue and among friends</td><td>Server (Google Firebase)</td></tr>
+      <tr><td>Only if you sign in with Google: the e-mail and name of your Google account that Firebase Authentication receives from Google</td><td>Signing you in to your account, also on another device</td><td>Server (Google Firebase)</td></tr>
+      <tr><td>Nickname</td><td>Shown in the catalogue and to friends; each nickname can belong to one user only</td><td>Server, visible to others</td></tr>
+      <tr><td>Recipe shared by code (text, no photos)</td><td>Passing a recipe to another user</td><td>Server</td></tr>
+      <tr><td>Published recipes or recipe cards in the catalogue, rating summary</td><td>Public recipe catalogue</td><td>Server, publicly visible in the app</td></tr>
+      <tr><td>Catalogue rating (number of stars)</td><td>Average rating – others see only the average, not who rated</td><td>Server</td></tr>
+      <tr><td>Recipe requests and author consents (nicknames of both parties, recipe name)</td><td>Requesting a recipe from the catalogue, publishing a family recipe with the author's consent</td><td>Server</td></tr>
+      <tr><td>Friends and the recipes you send each other (text, no photos)</td><td>Sending recipes to friends</td><td>Server</td></tr>
+      <tr><td>Recipe reports (who reported, reason, note, the reported recipe), blocking and unblock requests</td><td>Moderating inappropriate content and protecting copyright</td><td>Server</td></tr>
+      <tr><td>Usage statistics (e.g. app launches, starting cooking mode, creating a backup), device model, OS version, app instance ID</td><td>Improving the app (Google Analytics for Firebase) – no recipes, names, nicknames, e-mails and no advertising ID</td><td>Google – only with your consent</td></tr>
+      <tr><td>Crash reports (technical description of the error, device model, OS and app version)</td><td>Fixing bugs (Firebase Crashlytics)</td><td>Google</td></tr>
+      <tr><td>Advertising ID, IP address, device data and ad display data</td><td>Showing an occasional full-screen ad (Google AdMob)</td><td>Google</td></tr>
+    </table>
+    </div>
+    <p>Please do not use your real full name or other personal information as your nickname. Other users only see your nickname – never the e-mail or name of your Google account. The app does not need camera, storage or location permissions (you choose photos and files through system dialogs).</p>
+
+    <h3>Statistics and crash reports</h3>
+    <p>On first launch the app asks whether it may send anonymous <strong>usage statistics</strong>. Without your consent no statistics are sent at all. <strong>Crash reports</strong> help us fix bugs and are turned on. You can turn either on or off at any time in the app: Settings → Privacy.</p>
+
+    <h3>Ads and consent</h3>
+    <p>The free version occasionally shows a full-screen rewarded ad – at a natural break, with the option to skip it. Watching it to the end is rewarded with a longer ad-free break. Ads are provided by Google AdMob. If you are in the EU/EEA, the app asks for your consent on first launch using Google’s consent form (UMP). Without consent, only non-personalised ads are shown. You can change your choice at any time in the app: Settings → Ad privacy. You can reset or disable the advertising ID in your phone settings.</p>
+
+    <h3>Legal basis</h3>
+    <ul>
+      <li><strong>Performance of a contract</strong> – sharing, the catalogue, nicknames and friends, if you use these features.</li>
+      <li><strong>Consent</strong> – usage statistics and personalised ads (in the EU/EEA).</li>
+      <li><strong>Legitimate interest</strong> – crash reports to fix bugs, non-personalised ads to fund the app, content moderation, copyright protection and abuse prevention.</li>
+    </ul>
+
+    <h3>Who processes the data</h3>
+    <p>Server data is stored with Google Firebase (Authentication, Cloud Firestore, Analytics, Crashlytics); ads are provided by Google AdMob; text recognition and translation are provided by Google ML Kit directly on your phone. Google may process data outside the EU on the basis of the EU Standard Contractual Clauses. See the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a>. We do not sell your data.</p>
+
+    <h3>How long we keep data</h3>
+    <ul>
+      <li>Your account, nickname, published recipes, ratings and friends – until you delete them in the app or ask us to delete them.</li>
+      <li>A recipe shared by code – until received, at most 7 days. A recipe request – at most 30 days; an author consent code – 7 days.</li>
+      <li>A recipe sent to a friend – until it is accepted or declined.</li>
+      <li>Reports and blocking records – as long as needed to handle them and protect other users.</li>
+      <li>Statistics and crash reports – for the period set in Google Firebase.</li>
+      <li>Data on your device – until you uninstall the app or clear its data.</li>
+    </ul>
+
+    <h3>Your rights</h3>
+    <p>You have the right to access, rectify and erase your data, to restrict processing, to data portability, to object, and to withdraw consent. If you believe we process data unlawfully, you may lodge a complaint with a supervisory authority – in the Czech Republic, the <a href="https://uoou.gov.cz" rel="noopener">Office for Personal Data Protection (ÚOOÚ)</a>.</p>
+  </section>
+
+  <section class="card" id="delete">
+    <h2>Data deletion</h2>
+    <ul>
+      <li><strong>Data on your device</strong> (recipes, photos, shopping list, pantry) – uninstall the app or clear its data in your phone settings. You can delete individual recipes directly in the app.</li>
+      <li><strong>A published recipe</strong> – you can remove it from the catalogue at any time (in the recipe or under Catalogue → My published recipes).</li>
+      <li><strong>Your account and data on our server</strong> – delete them directly in the app: Settings → Account → Delete account and data. This deletes your account, nickname, shared codes, published recipes, friends and sent recipes, requests, consents and ratings.</li>
+      <li>You can also request deletion (including reports) by e-mail: write to <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a> with your nickname in the app. We handle requests within 30 days.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="terms">
+    <h2>Terms of use</h2>
+    <p>By using sharing, the public catalogue and friends you agree to the following:</p>
+    <ul>
+      <li>Share and publish only recipes you created yourself or wrote entirely in your own words, or recipes from family or friends with their consent.</li>
+      <li>Do not share recipes from cookbooks, magazines or websites – they are protected by copyright, even photographed, retyped or only slightly modified. You may keep such recipes for personal use only.</li>
+      <li>Do not publish vulgar, offensive, hateful, sexual, violent or advertising content – not in your nickname, nor in a recipe's name, description or steps.</li>
+      <li>Do not use other people’s names, brands or copyrighted content without permission.</li>
+      <li><strong>You alone are responsible for content you share or publish.</strong> If you share or publish a recipe that infringes copyright or other third-party rights, you bear all legal consequences yourself – including any claims by the authors for removal, compensation or damages. The operator of the app does not create or pre-check such content and is not liable for it; upon notice, it will hide or remove it without undue delay.</li>
+      <li>By publishing content you give us a free, non-exclusive permission to show it to other users in the app until you remove it.</li>
+      <li>Anyone can report an inappropriate recipe. After several reports a recipe is hidden automatically. We may hide or delete content that breaks these terms and restrict a user's public sharing; an unblock request can be sent in the app.</li>
+      <li>Do not exploit bugs or try to disrupt the server.</li>
+      <li>The app may change and online features may be temporarily unavailable. The app is provided “as is” to the extent permitted by law.</li>
+      <li>We may change these terms. We will inform you about significant changes in the app.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Martin Palla – developer of My Recipes – Cookbook<br>E-mail: <a href="mailto:pallamartas@seznam.cz">pallamartas@seznam.cz</a></p>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <span lang="cs">© 2026 Martin Palla · Moje recepty – kuchařka</span>
+  <span lang="en">© 2026 Martin Palla · My Recipes – Cookbook</span>
+</footer>
+
+<script>
+  var enAnchors = ['privacy', 'delete', 'terms', 'contact'];
+  var csAnchors = ['soukromi', 'smazani', 'pravidla', 'kontakt'];
+
+  function setLang(lang) {
+    document.body.classList.toggle('en', lang === 'en');
+    document.documentElement.lang = lang;
+    document.title = lang === 'en'
+      ? 'My Recipes – Cookbook – privacy policy and terms of use'
+      : 'Moje recepty – kuchařka – zásady ochrany soukromí a pravidla používání';
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+
+  // Jazyk: ?lang=en / #privacy… → angličtina, #soukromi… → čeština,
+  // jinak dřívější volba, jinak jazyk prohlížeče.
+  var q = new URLSearchParams(location.search).get('lang');
+  var hash = location.hash.replace('#', '');
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var lang = q === 'en' || q === 'cs' ? q
+    : enAnchors.indexOf(hash) >= 0 ? 'en'
+    : csAnchors.indexOf(hash) >= 0 ? 'cs'
+    : saved || ((navigator.language || 'cs').toLowerCase().indexOf('cs') === 0 ? 'cs' : 'en');
+  setLang(lang);
+  if (hash) { var t = document.getElementById(hash); if (t) t.scrollIntoView(); }
+</script>
+</body>
+</html>
